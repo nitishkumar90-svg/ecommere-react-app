@@ -135,9 +135,10 @@ ul.size-fields li input[type=radio]:checked+label
   padding: var(--pad-and-gap);
   border-radius: var(--pad-and-gap);
   width: 100%;
+  outline: 0;
 }
 
-.cart-button:hover {
+.cart-button:not(.disabled):hover {
   background-color: var(--secondary-color);
   color: var(--color-white);
 }

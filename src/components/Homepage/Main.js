@@ -2,7 +2,7 @@ import React from 'react'
 import Filters from './Filters'
 import ProductList from './Products/ProductList'
 
-const Main = () => {
+const Main = ({products}) => {
     return (
         <main className="products">
             <header className="hero-header">
@@ -33,11 +33,11 @@ const Main = () => {
                                         </select>
                                     </article>
                                 </article>
-                                <ProductList />
+                                <ProductList products={products} />
                             </article>
 
                             <nav aria-label="Pagination" className="pagination text-center">
-                                <p>Showing 4 of 11 products</p>
+                                <p>Showing ${products.length} of ${products.length} products</p>
                                 <ol className="pages flex flex-gap">
                                     <li className="disabled-page"><a href="javascript:void(0)" aria-label="Previous Page"><text>&lt;</text></a></li>
                                     <li className="active-page"><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
