@@ -1,11 +1,9 @@
 import React from 'react'
 
 const Product = ({ values }) => {
-    console.log('Is Flone Assured', values.isFloneAssured)
-    const floneAssuredImage = require('../../../img/verified.png').default
-    const ratings = values.Rating.map((elem) => <i id={elem.id} className={(elem === 1) ? "fas fa-star" : (elem === 0) ? "hidden" : "fas fa-star-half-alt"}></i>)
-    const colors = values.colors.map((elem, index) => <li><input id={elem.id} type="radio" checked name="colour" id={`Color_${elem.name}_${values.id}`} value={elem.name} /> <label for={`Color_${elem.name}_${values.id}`}>{elem.name}</label></li>)
-    const sizes = values.sizes.map((elem, index) => <li><input id={elem.id} type="radio" checked name="size" id={`Size_${elem.name}_${values.id}`} value={elem.name} /> <label for={`Size_${elem.name}_${values.id}`}>{elem.name}</label></li>)
+    const ratings = values.Rating.map((elem) => <i key={elem.id} className={(elem === 1) ? "fas fa-star" : (elem === 0) ? "hidden" : "fas fa-star-half-alt"}></i>)
+    const colors = values.colors.map((elem, index) => <li><input key={elem.id} type="radio" checked name="colour" id={`Color_${elem.name}_${values.id}`} value={elem.name} /> <label htmlFor={`Color_${elem.name}_${values.id}`}>{elem.name}</label></li>)
+    const sizes = values.sizes.map((elem, index) => <li><input key={elem.id} type="radio" checked name="size" id={`Size_${elem.name}_${values.id}`} value={elem.name} /> <label htmlFor={`Size_${elem.name}_${values.id}`}>{elem.name}</label></li>)
     return (
         <article className="product">
             <header>
@@ -14,7 +12,7 @@ const Product = ({ values }) => {
                 <data className="pad-top-4" value="39"><del>${values.actualPrice}</del> <ins>${values.sellingPrice}</ins></data>
                 <p className="pad-top-4">{values.description}</p>
                 <dl className={values.isFloneAssured ? "pad-top-4" : "hidden"}>
-                    <dt className="font-bold"><img title="Flone Assured" src={floneAssuredImage} className="verified-image" alt="" /></dt>
+                    <dt className="font-bold"><img title="Flone Assured" src={require('../../../img/verified.png').default} className="verified-image" alt="" /></dt>
                 </dl>
                 <dl className={(values.Rating.length > 0) ? "pad-top-4" : "hidden"}>
                     <dt className="font-bold">Rating</dt>

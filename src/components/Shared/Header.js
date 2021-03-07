@@ -7,7 +7,7 @@ const Header = () => {
             <article className="container">
                 <article className="grid grid-2">
                     <a href="index.html" className="logo text-left"><img src={imageLogo} alt="Flont." /></a>
-                    <article className="text-right icons"> 
+                    <article className="text-right icons">
                         <ul className="your-products flex text-right">
                             <li className="hidden-on-mobile-view show-on-webview"><a className="font-bold" id="shop-submenu" href="#">Shop<i
                                 className="fas fa-chevron-down shop-arrow"></i></a>

@@ -3,7 +3,7 @@ import React from 'react'
 const Filters = () => {
     return (
         <form className="filters container">
-            <h2 className="subheading text-left pad-3">Filters<a className="hide-on-webview" href="javascript:void(0)" id="toggle-filter"><i className="fas fa-filter"></i></a>
+            <h2 className="subheading text-left pad-3">Filters<a className="hide-on-webview" href="#" id="toggle-filter"><i className="fas fa-filter"></i></a>
             </h2>
 
             <article id="filter-options" className="filter-options hidden-on-mobile-view">
